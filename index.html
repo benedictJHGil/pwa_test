@@ -25,7 +25,7 @@
     let installPromptEvent;
 
     window.addEventListener('beforeinstallprompt', event => {
-        event.preventDefault();
+        // event.preventDefault();
         console.log('beforeinstallprompt', event);
         installPromptEvent = event;
     });
