@@ -1,6 +1,6 @@
 {
     "name": "test",
-    "display": "minimal-ui",
+    "display": "standalone",
     "start_url": "/",
     "icons": [
         {
