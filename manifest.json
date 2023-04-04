@@ -1,6 +1,6 @@
 {
     "name": "test",
-    "display": "browser",
+    "display": "minimal-ui",
     "start_url": "/",
     "icons": [
         {
