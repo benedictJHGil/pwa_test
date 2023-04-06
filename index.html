@@ -63,12 +63,14 @@
     });
 
     const btn = document.querySelector('#btn');
+    btn.style.display = 'none';
     let installPromptEvent;
 
     window.addEventListener('beforeinstallprompt', event => {
         // event.preventDefault();
         console.log('beforeinstallprompt', event);
         installPromptEvent = event;
+        btn.style.display = 'block';
     });
 
     btn.addEventListener('click', () => {
