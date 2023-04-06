@@ -1,6 +1,6 @@
 {
     "name": "test",
-    "display": "browser",
+    "display": "standalone",
     "start_url": "/",
     "icons": [
         {
