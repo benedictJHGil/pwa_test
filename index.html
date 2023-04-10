@@ -99,10 +99,14 @@
       // Detects if device is on iOS
       const isIos = () => {
         const userAgent = window.navigator.userAgent.toLowerCase();
+        console.log('userAgent', userAgent);
+        console.log('test(userAgent)',/iphone|ipad|ipod/.test(userAgent));
         return /iphone|ipad|ipod/.test( userAgent );
       }
       // Detects if device is in standalone mode
       const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+      console.log('standalone in window.navigator', 'standalone' in window.navigator);
+      console.log('window.navigator.standalone', window.navigator.standalone);
 
       // Checks if should display install popup notification:
       if (isIos() && !isInStandaloneMode()) {
