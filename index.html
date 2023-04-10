@@ -53,18 +53,18 @@
     <h1>Hello PWA</h1>
     <button id="btn">test</button>
     <script>
-    window.addEventListener('load', () => {
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-          .register('sw.js')
-          .then(registration => console.log('registered', registration))
-          .catch(error => console.log('error', error));
-      }
-    });
+//     window.addEventListener('load', () => {
+//       if ('serviceWorker' in navigator) {
+//         navigator.serviceWorker
+//           .register('sw.js')
+//           .then(registration => console.log('registered', registration))
+//           .catch(error => console.log('error', error));
+//       }
+//     });
 
-    const btn = document.querySelector('#btn');
-    btn.style.display = 'none';
-    let installPromptEvent;
+//     const btn = document.querySelector('#btn');
+//     btn.style.display = 'none';
+//     let installPromptEvent;
 
 //     window.addEventListener('beforeinstallprompt', event => {
 //         // event.preventDefault();
