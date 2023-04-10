@@ -8,7 +8,7 @@
 <!--     <script src="js/addtohomescreen.js"></script> -->
 <!--     <script src="js/bookmark_bubble.js"></script> -->
 <!--     <script src="js/example.js"></script> -->
-    <script src="js/test.js"></script>
+<!--     <script src="js/test.js"></script> -->
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="images/logo_192.png" />
     <link
@@ -64,6 +64,19 @@
           .catch(error => console.log('error', error));
       }
     });
+      
+    // Detects if device is on iOS 
+    const isIos = () => {
+      const userAgent = window.navigator.userAgent.toLowerCase();
+      return /iphone|ipad|ipod/.test( userAgent );
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+      this.setState({ showInstallMessage: true });
+    }
 
 //     const btn = document.querySelector('#btn');
 //     btn.style.display = 'none';
