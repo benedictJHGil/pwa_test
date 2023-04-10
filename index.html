@@ -108,15 +108,15 @@
       console.log('standalone in window.navigator', 'standalone' in window.navigator);
       console.log('window.navigator.standalone', window.navigator.standalone);
 
+      const btn = document.querySelector('#btn');
+      btn.style.display = 'none';
+      let installPromptEvent;
+      
       // Checks if should display install popup notification:
       if (isIos() && !isInStandaloneMode()) {
         // this.setState({ showInstallMessage: true });
         showIosInstall();
       } else {
-        const btn = document.querySelector('#btn');
-        btn.style.display = 'none';
-        let installPromptEvent;
-
         window.addEventListener('beforeinstallprompt', event => {
             // event.preventDefault();
             console.log('beforeinstallprompt', event);
