@@ -175,7 +175,7 @@ ath.defaults = {
 	autostart: true,			// show the message automatically
 	skipFirstVisit: false,		// show only to returning visitors (ie: skip the first time you visit)
 	startDelay: 1,				// display the message after that many seconds from page load
-	lifespan: 15,				// life of the message in seconds
+	lifespan: 0,				// life of the message in seconds
 	displayPace: 1440,			// minutes before the message is shown again (0: display every time, default 24 hours)
 	maxDisplayCount: 0,			// absolute maximum number of times the message will be shown to the user (0: no limit)
 	icon: true,					// add touch icon to the message
