@@ -94,9 +94,14 @@
         iosPrompt.children[0].addEventListener("click", () => {
           iosPrompt.style.display = "none";
         });
-        window.addEventListener("touchstart", () => {
-          iosPrompt.style.display = "none";
-        });
+         if ('standalone' in window.navigator && window.navigator.standalone) {
+            iosPrompt.style.display = "none";
+          } else if (window.matchMedia('(display-mode: standalone)').matches) {
+            iosPrompt.style.display = "none";
+          } else {
+            // Prompt to add to home screen
+            alert('ブラウザの共有ボタンから「ホーム画面に追加」をタップしてください。');
+          }
       }
     
       // Detects if device is on iOS
