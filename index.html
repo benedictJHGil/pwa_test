@@ -91,7 +91,10 @@
      function showIosInstall() {
         let iosPrompt = document.querySelector(".ios-prompt");
         iosPrompt.style.display = "block";
-        iosPrompt.addEventListener("click", () => {
+        iosPrompt.children[0].addEventListener("click", () => {
+          iosPrompt.style.display = "none";
+        });
+        document.addEventListener("touchend", () => {
           iosPrompt.style.display = "none";
         });
       }
