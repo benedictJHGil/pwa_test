@@ -94,7 +94,7 @@
         iosPrompt.children[0].addEventListener("click", () => {
           iosPrompt.style.display = "none";
         });
-        document.addEventListener("touchmove", () => {
+        window.addEventListener("touchstart", () => {
           iosPrompt.style.display = "none";
         });
       }
